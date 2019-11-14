@@ -1,10 +1,11 @@
 const display = document.querySelector('.calc .display');
-document.querySelectorAll('.calc .digits button, .calc .opers button, .calc .clr button, .calc .bck-spc button')
+document.querySelectorAll('.calc .digits button, .calc .opers button, .calc .clr button, .calc .bck-spc button, .calc .sqrt button')
     .forEach( button => button.addEventListener('click', digitOperPressed));
 
 function digitOperPressed(event) {
     const btnText = event.target.innerText;
     display.value += btnText;
+
 }
 
 document.querySelector('.calc .eq')
@@ -27,4 +28,11 @@ document.querySelector('.calc .bck-spc')
 function bckSpcPressed() {
     display.value = (display.value.substring(0, display.value.length - 1))
 }
+document.querySelector('.calc .sqrt')
+    .addEventListener('click', sqrtPressed)
+
+function sqrtPressed() {
+   display.value += Math.sqrt(btnText)
+}
+
 
