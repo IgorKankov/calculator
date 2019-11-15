@@ -15,6 +15,9 @@ function eqPressed() {
     display.value = eval(display.value);
 }
 
+
+
+
 document.querySelector('.calc .clr')
     .addEventListener('click', clrPressed)
 
@@ -32,7 +35,7 @@ document.querySelector('.calc .sqrt')
     .addEventListener('click', sqrtPressed)
 
 function sqrtPressed() {
-   display.value += Math.sqrt(btnText)
+    display.value = Math.sqrt(eval(display.value))
 }
 
 
